@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies App</title>
+    <link rel="stylesheet" href="movies.css">
+</head>
+<body>
+    <div class="container section-m1" >
+        <h1>Movies App</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for movies..." oninput="searchMovies()">
+        </div>
+        <select class="sort-options" onchange="handleSortChange(this)">
+            <option value="popularity">Sort by Popularity</option>
+            <option value="release_date">Sort by Release Date</option>
+            <option value="rating">Sort by Rating</option>
+            <option value="watchlist">Show Watchlist</option>
+        </select>
+        <div id="recommendedMovies">
+            <h2>Recommended Movies</h2>
+                <div id="movieGrid" class="movie-grid"></div>
+        </div>
+        <div id="loading" class="loading hidden">Loading...</div>
+        <div id="movieGrid" class="movie-grid"></div>
+        <div id="watchlist" class="watchlist hidden">
+            <h2>Your Watchlist</h2>
+            <div id="watchlistGrid" class="movie-grid"></div>
+            <button onclick="closeWatchlist()">Close Watchlist</button>
+        </div>
+        <div id="modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div id="movieDetails"></div>
+            </div>
+        </div>
+    </div>
+    <script src="movies.js"></script>
+</body>
+</html>

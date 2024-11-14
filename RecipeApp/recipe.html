@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe App</title>
+    <link rel="stylesheet" href="recipe.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="container" class="section-p1">
+        <h1 class="section-p1">Recipe App</h1>
+
+        <div id="search-form">
+            <input type="text" id="query" placeholder="Search for recipes..." oninput="autoSuggest()">
+            <button id="search-btn" onclick="searchRecipes()"><i class="fas fa-search"></i></button>
+        </div>
+        
+        <div id="suggestions" class="suggestions-list"></div>
+        
+        <div id="results" class="recipes-grid"></div>
+        
+        <div id="recipe-details" style="display: none;">
+            <div id="statusBar">
+                <span>
+                    <i id="close-btn" onclick="closeRecipeDetails()" class="fas fa-window-close"></i>
+                </span>
+            </div>
+            <div id="recipe-content"></div>
+        </div>
+
+        <div id="nav-bar">
+            <button id="home-btn"><i class="fas fa-home"></i></button>
+            <button id="favorite-btn" onclick="window.location.href='favorite.html'"><i class="fas fa-heart"></i></button>
+        </div>
+    </div>
+    <script src="recipe.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="recipe.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Dancing+Script:wght@700&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container" class="section-p1">
+
+        <h1 class="section-p1">Recipe App</h1>
+
+        <div id="search-form">
+            <input type="text" id="query" placeholder="Search for recipes...">
+            <button id="search-btn" onclick="searchRecipes()"><i class="fas fa-search"></i></button>
+        </div>
+
+        <div id="results"></div>
+
+        <div id="recipe-details" style="display: none;">
+
+            <div id="statusBar">
+                <span>
+                    <i id="close-btn" onclick="closeRecipeDetails()" class="fas fa-window-close"></i>
+                </span>
+            </div>
+
+            <div id="recipe-content"></div>
+
+        </div>
+
+        <div id="nav-bar">
+            <button id="home-btn"><i class="fas fa-home"></i></button>
+            <button id="favorite-btn" onclick="window.location.href='favorite.html'"><i class="fas fa-heart"></i></button>
+        </div>
+    </div>
+    <script src="/RecipeApp/recipe.js"></script>
+</body>
+</html> -->
